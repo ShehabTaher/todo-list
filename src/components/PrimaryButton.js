@@ -6,11 +6,15 @@ import React, { Children } from 'react'
 //     primary: 'primary',
 //     secondary: 'secondary'
 // }
-function PrimaryButton({children})  {
+function PrimaryButton({children , type, ...rest})  {
   return (
-    <button 
-    type='button' 
-    className='button button--primary'>{children}</button>
+    <button  
+    className='button button--primary'
+    type={type === 'submit' ? 'submit' : 'button'}
+    {...rest}
+    >
+      {children}
+      </button>
   )
 }
 

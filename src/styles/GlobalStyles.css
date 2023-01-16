@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 :root {
 	--primaryPurple: #646ff0;
 	--black-1: #646681;
@@ -17,23 +18,28 @@
 	--black: black;
 	--white: white;
 }
+
 html {
 	font-size: 10px;
 }
+
 body {
 	font-family: 'Poppins', sans-serif;
 	width: 100%;
 	min-height: 100vh;
 	background-color: var(--bg-1);
 }
+
 * {
 	font-family: 'Poppins', sans-serif;
 }
+
 .container {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
 .title {
 	display: inline-block;
 	width: 100%;
@@ -56,12 +62,20 @@ body {
 	width: 100%;
 	margin: 0 auto;
 }
+
+.app__wrapper {
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .appHeader {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: 60px;
 }
+
 .content__wrapper {
 	background-color: var(--bg-2);
 	padding: 2rem;
@@ -70,6 +84,7 @@ body {
 		padding: 1.5rem;
 	} */
 }
+
 .emptyText {
 	/* display: inline-block; */
 	font-size: 1.6rem;
@@ -83,6 +98,7 @@ body {
 	width: max-content;
 	height: auto;
 }
+
 .button {
 	display: inline-block;
 	height: auto;
@@ -106,15 +122,29 @@ body {
 		cursor: pointer;
 	} */
 }
+
+.button__select {
+	color: var(--black-2);
+	font-family: Poppins;
+	padding: 1rem;
+	border: none;
+	background-color: var(--bg-3);
+
+	width: 150px;
+	cursor: pointer;
+}
+
 .button--primary {
 	background-color: var(--primaryPurple);
 	color: var(--white);
 }
+
 .button--secondary {
 	background-color: var(--bg-3);
 	color: var(--black-1);
 }
-.wrapper {
+
+.modal-wrapper {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -126,7 +156,8 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-/* .container {
+
+.modal-container {
 	background-color: var(--bg-2);
 	max-width: 500px;
 	width: 90%;
@@ -137,7 +168,8 @@ body {
 	padding: 2rem;
 	border-radius: 8px;
 	position: relative;
-} */
+}
+
 .closeButton {
 	position: absolute;
 	top: -10px;
@@ -154,11 +186,13 @@ body {
 	cursor: pointer;
 	transition: 0.3s ease all;
 	z-index: -1;
-	/* &:hover {
-		background-color: #e32525;
-		color: white;
-	} */
 }
+
+.closeButton:hover {
+	background-color: #e32525;
+	color: white;
+}
+
 .formTitle {
 	color: var(--black-1);
 	font-size: 2rem;
@@ -166,23 +200,27 @@ body {
 	margin-bottom: 2rem;
 	text-transform: capitalize;
 }
+
 .form {
 	width: 100%;
-	/* label {
-		font-size: 1.6rem;
-		color: var(--black-1);
-		input,
-		select {
-			margin-top: 0.5rem;
-			margin-bottom: 2rem;
-			width: 100%;
-			padding: 1rem;
-			border: none;
-			background-color: var(--white);
-			font-size: 1.6rem;
-		}
-	} */
 }
+
+.form label {
+	font-size: 1.6rem;
+	color: var(--black-1);
+}
+
+form input,
+.form select {
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	background-color: var(--white);
+	font-size: 1.6rem;
+}
+
 .buttonContainer {
 	display: flex;
 	justify-content: flex-start;
@@ -199,16 +237,18 @@ body {
 	background: var(--white);
 	margin-bottom: 1.5rem;
 	border-radius: 4px;
-	/* &:last-child {
-		margin-bottom: 0;
-	} */
 }
+.item:nth-last-child(){
+	margin-bottom: 0;
+}
+
 .todoDetails {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	gap: 1rem;
 }
+
 .svgBox {
 	flex-basis: 25px;
 	flex-shrink: 0;
@@ -232,22 +272,24 @@ body {
 		justify-content: center;
 	} */
 }
+
 .texts {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 }
+
 .todoText {
 	word-break: break-all;
 	font-weight: 500;
 	font-size: 1.4rem;
 	color: var(--black-2);
-
-	/* &--completed {
-		text-decoration: line-through;
-		opacity: 0.7;
-	} */
 }
+.todoText--completed {
+	text-decoration: line-through;
+		opacity: 0.7;
+}
+
 .time {
 	display: block;
 	font-size: 1.2rem;
@@ -255,12 +297,14 @@ body {
 	margin-top: -0.2rem;
 	color: var(--black-2);
 }
+
 .todoActions {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
 }
+
 .icon {
 	font-size: 2rem;
 	padding: 0.5rem;
